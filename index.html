@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <link href="./css/style.css" type="text/css" rel="stylesheet"/>
+
+    <title>NutriBuddy</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg"> <!-- Placeholder for logo -->
+        <a class="navbar-brand" href="#"><img src="./assets/images/favicon.png" alt="NutriBuddy Logo"></img>NutriBuddy</a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button class="try-now-btn" onclick="alert('Coming Soon!')">Try Now</button>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- Home Section -->
+    <div class="jumbotron" id="home">
+        <div container="jumbotron-layer">
+            <h1 class="display-4">Welcome to NutriBuddy</h1>
+            <p class="lead">Your personalized meal planning assistant designed to tailor-fit meal plans based on your fitness goals, caloric needs, energy levels, mood, and even what's already in your fridge! 🥦🍗🍓</p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="container section" id="about">
+        <div class="section-heading">
+            <h2>About</h2>
+            <p>
+                NutriBuddy is currently being developed by a passionate team committed to making healthy eating simple, personalized, 
+                and accessible for everyone. Our goal is to create a natural and enjoyable journey, helping you build the discipline 
+                for lifelong fitness without the tediousness or demotivation. By leveraging the power of machine learning,
+                NutriBuddy provides personalized meal plans tailored to your unique needs and preferences. 
+                The overall application experience is designed to require minimal effort from the user, utilizing natural language for seamless and intuitive interaction.
+
+                <br><br>
+                This project was started as a part of the Nights & Weekends S5 cohort by <a href="https://buildspace.so">buildspace</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container section" id="contact">
+        <div class="section-heading">
+            <h2>Contact</h2>
+            <p>Have questions or feedback? Reach out to us at <a href="mailto:support@nutribuddy.com">support@nutribuddy.com</a>.</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
