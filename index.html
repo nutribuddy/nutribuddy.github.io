@@ -13,6 +13,8 @@
     <link href="./css/style.css" type="text/css" rel="stylesheet"/>
 
     <title>NutriBuddy</title>
+    <!-- Add favicon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -36,7 +38,7 @@
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <button class="try-now-btn" onclick="alert('Coming Soon!')">Try Now</button>
+                    <a href="#try-now"><button class="try-now-btn">Join Waitlist</button></a>
                 </li>
             </ul>
         </div>
@@ -47,7 +49,19 @@
     <div class="jumbotron" id="home">
         <div container="jumbotron-layer">
             <h1 class="display-4">Welcome to NutriBuddy</h1>
-            <p class="lead">Your personalized meal planning assistant designed to tailor-fit meal plans based on your fitness goals, caloric needs, energy levels, mood, and even what's already in your fridge! 🥦🍗🍓</p>
+            <p class="lead">
+                Your personalized meal planning assistant is here!<br> 
+                Tailor-fit all your meal plans based on your fitness goals, caloric needs, energy levels, mood, 
+                and even what's already in your fridge! 🥦🍗🍓</p>
+            
+            <form class="try-now-form" id="try-now">
+                <input class="form-control mr-sm-2" type="text" placeholder="Email ID" aria-label="Email ID" id="email">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Join Waitlist</button>
+            </form>
+
+            <p id="thank-you-message">
+                Thank you for joining our waitlist. We will be in touch with you very soon.
+            </p>
         </div>
     </div>
 
@@ -72,7 +86,7 @@
     <div class="container section" id="contact">
         <div class="section-heading">
             <h2>Contact</h2>
-            <p>Have questions or feedback? Reach out to us at <a href="mailto:support@nutribuddy.com">support@nutribuddy.com</a>.</p>
+            <p>Have questions or feedback? Reach out to us at <a href="mailto:ognutribuddy@gmail.com">ognutribuddy@gmail.com</a>.</p>
         </div>
     </div>
 
@@ -80,5 +94,45 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('try-now').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var email = document.getElementById('email').value;
+            console.log(email);
+
+            fetch('https://script.google.com/macros/s/AKfycbzfGTf_s6bnj2VE7KG3mfnyi8K5vicRrHZJqwK3BCJ_RIdqLrUT7K_Nj9eBH6ajrk5P/exec', { // Replace YOUR_SCRIPT_URL with the URL from step 3
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'email=' + encodeURIComponent(email)
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }).catch(error => {
+            console.error('Error:', error);
+        });
+    </script>
+    <script>
+        const form = document.querySelector('form');
+        const thankYouMessage = document.querySelector('#thank-you-message');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            thankYouMessage.classList.add('show');
+            setTimeout(() => form.submit(), 2000);
+        });
+    </script>
 </body>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2024 NutriBuddy. All "rights" reserved.</p>
+</footer>
+
 </html>

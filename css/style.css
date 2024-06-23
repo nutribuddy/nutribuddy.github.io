@@ -141,14 +141,24 @@ body {
 
 .jumbotron p {
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
     text-align: center;
     text-wrap: pretty;
 }
 
+.jumbotron h1 { 
+    font-weight: 500;
+    font-size: 60px;
+    padding-bottom: 50px;
+}
+
 .section {
-    padding: 60px 0;
+    padding: 10px 0;
+}
+
+.section h2 {
+    padding: 20px;
 }
 
 .section-heading {
@@ -168,8 +178,60 @@ body {
     border-radius: 20px;
 }
 
+.try-now-btn a {
+    transition: 0.3s;
+    background: #538e9f;
+    color: #000;
+    border: none;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
 .try-now-btn:hover {
     transition: 0.3s;
     background: #ffffff;
     color: #000;
+}
+
+.try-now-btn a:hover {
+    background: #ffffff;
+    color: #000;
+}
+
+.try-now-form {
+    padding: 50px;
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.try-now-form input[type="text"] {
+    margin-bottom: 20px;
+}
+
+.try-now-form button[type="submit"] {
+    margin-top: 20px;
+}
+
+#thank-you-message {
+    display: none;
+}
+  
+#thank-you-message.show {
+    display: block;
+}
+
+.footer {
+    background: #000000;
+    color: #fff;
+    padding-top: 15px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    height: 50px;
+    max-height: auto;
+    text-align: center;
 }
