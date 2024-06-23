@@ -224,6 +224,19 @@ body {
     display: block;
 }
 
+.team-member {
+    text-align: center;
+    padding: 20px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: #254fac;
+}
+
 .footer {
     background: #000000;
     color: #fff;
@@ -234,4 +247,5 @@ body {
     height: 50px;
     max-height: auto;
     text-align: center;
+    bottom: 0;
 }
